@@ -1,6 +1,7 @@
 import React ,{useState,useEffect} from "react";
 import './style.css';
-import {getMovies} from "../../utils/utilities";import Navigation from "../../Navigation";
+import {getMovies} from "../../utils/utilities";
+import { Navigation } from "react-router-dom";
 
 const IMAGE_BASE_URL=process.env.REACT_APP_IMAGE_BASE_URL
 
@@ -22,11 +23,11 @@ const GetMovies=()=>{
     }
     return (
         <div>
-            <Navigation></Navigation>
+            <h1 className="movie">All Movies</h1>
         <div className="container">
        {movies &&
        !loading &&
-       movies.length >0 &&
+       movies.length > 0 &&
        movies.map(item=>(
         <div className="image-container">
             <img src={`${IMAGE_BASE_URL}${item.poster_path}`} alt="{item.title"/>

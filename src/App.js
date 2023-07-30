@@ -1,13 +1,15 @@
 // import logo from './logo.svg';
-import './App.css';
 import GetMovies from './Components/GetMovies';
-import Navigation from './Navigation';
+import './App.css';
+import Navigation from './Components/Navigation';
+// import { Carousel } from 'react-responsive-carousel';
 
 function App() {
   return (
     <div>
-     <GetMovies/>
-     <Navigation/>
+      <Navigation/>
+      <GetMovies/>
+
     </div>
   );
 }
